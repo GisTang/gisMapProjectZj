@@ -1,0 +1,130 @@
+﻿<div class="sideNavs-cartographic-components-PrintMapPanel">
+    <div>
+        <form class="form-horizontal" style="margin-top: 30px;">
+        <div class="form-group" style="padding: 5px;">
+            <label>
+                纸张方向：</label>
+            <div class="inputItem">
+                <select id="paperDirection" style="width: 200px; height: 25px;">
+                    <option value="Landscape" selected>横向</option>
+                    <option value="Portrait">纵向</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group" style="padding: 5px;">
+            <label>
+                纸张大小：</label>
+            <div class="inputItem">
+                <select id="paperSize" style="width: 200px; height: 25px;">
+                    <option value="A4" selected>A4</option>
+                    <option value="A3">A3</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group" style="padding: 5px;">
+            <label>
+                打印模版：</label>
+            <div class="inputItem">
+                <div id="printTemplate" style="width: 200px; height: 150px; border: 1px solid #ccc;
+                    border-radius: 4px;">
+                    <img style="margin-left: 1px; margin-top: 1px; width: 197px; height: 147px;" src="plugins/sideNavs/cartographic/components/PrintMap.images/landsacpe.png"
+                        name="landsacpe">
+                </div>
+                <div class="popup-printTemplate-choose" style="display: none; left: 95px; width: 225px;
+                    position: absolute; z-index: 20; background-color: #fff; border: 1px solid #D1D1D1;">
+                    <div class="printTemplate-header" style="height: 35px; text-align: center; margin-top: 10px;
+                        font-size: 13px; font-weight: bold; color: #999;">
+                        点击图片选择打印模版
+                    </div>
+                    <div class="printTemplate-container" style="height: 320px; overflow: auto;">
+                        <ul>
+                            <li style="margin-top: 8px;">
+                                <img style="margin-left: 1px; margin-top: 1px; width: 197px; height: 147px;" src="plugins/sideNavs/cartographic/components/PrintMap.images/landsacpe.png"
+                                    name="landsacpe">
+                            </li>
+                            <li style="margin-top: 8px;">
+                                <img style="margin-left: 1px; margin-top: 1px; width: 197px; height: 147px;" src="plugins/sideNavs/cartographic/components/PrintMap.images/landsacpe-1.png"
+                                    name="landsacpe-1">
+                            </li>
+                            <li style="margin-top: 8px;">
+                                <img style="margin-left: 1px; margin-top: 1px; width: 197px; height: 147px;" src="plugins/sideNavs/cartographic/components/PrintMap.images/landsacpe-2.png"
+                                    name="landsacpe-2">
+                            </li>
+                            <li style="margin-top: 8px;">
+                                <img style="margin-left: 1px; margin-top: 1px; width: 197px; height: 147px;" src="plugins/sideNavs/cartographic/components/PrintMap.images/landsacpe-3.png"
+                                    name="landsacpe-3">
+                            </li>
+                            <li style="margin-top: 8px;">
+                                <img style="margin-left: 1px; margin-top: 1px; width: 197px; height: 147px;" src="plugins/sideNavs/cartographic/components/PrintMap.images/landsacpe-4.png"
+                                    name="landsacpe-4">
+                            </li>
+                            <li style="margin-top: 8px;">
+                                <img style="margin-left: 1px; margin-top: 1px; width: 197px; height: 147px;" src="plugins/sideNavs/cartographic/components/PrintMap.images/landsacpe-5.png"
+                                    name="landsacpe-5">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group" style="padding: 5px;">
+            <label>
+                输出格式：</label>
+            <div class="inputItem">
+                <select id="outputFormat" style="width: 200px; height: 25px;">
+                    <option value="pdf" selected>pdf</option>
+                    <option value="png32">png</option>
+                    <option value="jpg">jpg</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group" style="padding: 5px;">
+            <label>
+                分辨率：</label>
+            <div class="inputItem">
+                <select id="DPI" style="width: 200px; height: 25px;">
+                    <option value="72">72</option>
+                    <option value="96">96</option>
+                    <option value="120">120</option>
+                    <option value="150" selected>150</option>
+                    <option value="300">300</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group" style="padding: 5px;">
+            <label>
+                地图比例：</label>
+            <div class="inputItem">
+                <select id="printScale" style="width: 200px; height: 25px;">
+                    <option value="0" selected>当前比例</option>
+                    <option value="500">500</option>
+                    <option value="2500">2500</option>
+                    <option value="5000">5000</option>
+                    <option value="10000">10000</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group" style="padding: 5px;">
+            <label>
+                标题：</label>
+            <div class="inputItem">
+                <textarea id="tittle" class="form-control" rows="3" style="width: 200px; resize: none;"></textarea>
+            </div>
+        </div>
+        <div class="form-group" style="padding: 5px;">
+            <label>
+                版权：</label>
+            <div class="inputItem">
+                <textarea id="copyRightTxt" class="form-control" rows="3" style="width: 200px; resize: none;"></textarea>
+            </div>
+        </div>
+        </form>
+    </div>
+    <div style="margin-left: 145px; padding-top: 30px;">
+        <button id="previewMapBtn" type="button" class="btn btn-sm btn-primary">
+            重新生成
+        </button>
+        <div id="print_Btn" style="display: inline-block;">
+        </div>
+    </div>
+</div>
